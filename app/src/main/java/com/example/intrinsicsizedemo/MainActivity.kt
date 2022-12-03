@@ -34,16 +34,15 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainScreen() {
-
+    var textState by remember { mutableStateOf("") }
+    val onTextChange = { text: String ->
+        textState = text
+    }
 }
 
 
 @Composable
 fun MyTextField(text: String, onTextChange: (String) -> Unit) {
-    var textState by remember { mutableStateOf("") }
-    val onTextChange = { text: String ->
-        textState = text
-    }
 
     TextField(
         value = text,
