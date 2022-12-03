@@ -41,14 +41,22 @@ fun MainScreen() {
     val onTextChange = { text: String ->
         textState = text
     }
-
-    Column {
-        Text(
-            text = textState,
-            modifier = Modifier
-                .padding(start = 4.dp)
-        )
-        Box(modifier = Modifier.height(10.dp).fillMaxWidth().background(Color.Blue))
+    Column(
+        Modifier
+            .width(200.dp)
+            .padding(5.dp)) {
+        Column {
+            Text(
+                text = textState,
+                modifier = Modifier
+                    .padding(start = 4.dp)
+            )
+            Box(modifier = Modifier
+                .height(10.dp)
+                .fillMaxWidth()
+                .background(Color.Blue))
+        }
+        MyTextField(text = textState, onTextChange = onTextChange)
     }
 }
 
