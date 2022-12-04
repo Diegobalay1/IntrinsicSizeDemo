@@ -45,7 +45,7 @@ fun MainScreen() {
         Modifier
             .width(200.dp)
             .padding(5.dp)) {
-        Column {
+        Column(modifier = Modifier.width(IntrinsicSize.Max)) {
             Text(
                 text = textState,
                 modifier = Modifier
@@ -71,7 +71,7 @@ fun MyTextField(text: String, onTextChange: (String) -> Unit) {
 
 }
 
-@Preview
+@Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun MainScreenPreview() {
     IntrinsicSizeDemoTheme {
