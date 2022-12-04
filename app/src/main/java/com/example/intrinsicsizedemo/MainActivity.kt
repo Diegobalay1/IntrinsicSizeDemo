@@ -45,7 +45,8 @@ fun MainScreen() {
         Modifier
             .width(200.dp)
             .padding(5.dp)) {
-        Column(modifier = Modifier.width(IntrinsicSize.Max)) {
+        //Column(modifier = Modifier.width(IntrinsicSize.Max)) {
+        Column(modifier = Modifier.width(IntrinsicSize.Min)) {
             Text(
                 text = textState,
                 modifier = Modifier
